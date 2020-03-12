@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns = "http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>planetlab</groupId>
+  <artifactId>wkt-writer</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>CSV to WKT with Apache SIS</name>
+  <url>https://github.com/PlanetMap/csv2WKtByApacheSIS</url>
+  <inceptionYear>2020</inceptionYear>
+
+  <description>
+    Parse Coordinate Reference System (CRS) definitions of astronomical bodies
+    (planets, satellite, asteroids, …) from comma-separated values (CSV) files,
+    and rewrite those definitions in ISO 19162 Well Known Text (WKT) format.
+    The Apache Spatial Information System (SIS) library is used for this process.
+    A limitation is that only the type of CRS supported by Apache SIS can be converted.
+  </description>
+
+  <licenses>
+    <license>
+    <name>Apache 2.0</name>
+    <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/PlanetMap/csv2WKtByApacheSIS</url>
+    <connection>scm:git:https://github.com/PlanetMap/csv2WKtByApacheSIS.git</connection>
+    <developerConnection>scm:git:https://github.com/PlanetMap/csv2WKtByApacheSIS.git</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Jean-Christophe Malapert</name>
+      <id>J-Christophe</id>
+      <organization>CNES</organization>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Administrator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Martin Desruisseaux</name>
+      <id>desruisseaux</id>
+      <email>martin.desruisseaux@geomatys.com</email>
+      <organization>Geomatys</organization>
+      <organizationUrl>http://www.geomatys.com/</organizationUrl>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.sis.core</groupId>
+      <artifactId>sis-referencing</artifactId>
+      <version>1.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
